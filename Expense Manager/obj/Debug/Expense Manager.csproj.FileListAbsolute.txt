@@ -1,0 +1,19 @@
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\Bin\Debug\Expense Manager.dll
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\Bin\Debug\Expense Manager.pdb
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\Bin\Debug\AppManifest.xaml
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\Bin\Debug\Expense_Manager_Debug_AnyCPU.xap
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\obj\Debug\App.g.cs
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\obj\Debug\MainPage.g.cs
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\obj\Debug\Expense Manager.g.resources
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\obj\Debug\Expense_Manager.Resources.AppResources.resources
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\obj\Debug\Expense Manager.csproj.GenerateResource.Cache
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\obj\Debug\Expense Manager.dll
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\obj\Debug\Expense Manager.pdb
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\Expense Manager\Expense Manager\obj\Debug\XapCacheFile.xml

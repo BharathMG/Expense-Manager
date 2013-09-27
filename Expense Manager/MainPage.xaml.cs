@@ -8,6 +8,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Expense_Manager.Resources;
+using System.IO.IsolatedStorage;
+using Windows.Phone.System.UserProfile;
 
 namespace Expense_Manager
 {
@@ -17,25 +19,55 @@ namespace Expense_Manager
         public MainPage()
         {
             InitializeComponent();
-
+            MessageBox.Show("Hi");
+            int expense;
+            if(IsolatedStorageSettings.ApplicationSettings.TryGetValue<int>("total_expense",out expense))
+            {
+                Dispatcher.BeginInvoke(() => { expense_block.Text = expense.ToString(); });
+            }
+            if(!IsolatedStorageSettings.ApplicationSettings.Contains("total_expense"))
+            IsolatedStorageSettings.ApplicationSettings.Add("total_expense",0);
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
 
-        // Sample code for building a localized ApplicationBar
-        //private void BuildLocalizedApplicationBar()
-        //{
-        //    // Set the page's ApplicationBar to a new instance of ApplicationBar.
-        //    ApplicationBar = new ApplicationBar();
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/AddExpense.xaml", UriKind.Relative));
+        }
 
-        //    // Create a new button and set the text value to the localized string from AppResources.
-        //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
-        //    appBarButton.Text = AppResources.AppBarButtonText;
-        //    ApplicationBar.Buttons.Add(appBarButton);
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/AllExpenses.xaml", UriKind.Relative));
+        }
 
-        //    // Create a new menu item with the localized string from AppResources.
-        //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
-        //    ApplicationBar.MenuItems.Add(appBarMenuItem);
-        //}
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+            {
+                int expense;
+                if (IsolatedStorageSettings.ApplicationSettings.TryGetValue<int>("total_expense", out expense))
+                {
+                    Dispatcher.BeginInvoke(() => { expense_block.Text = expense.ToString(); });
+                }
+                change();
+                
+            }
+
+        private void change()
+        {
+            int expense = 0;
+            if (IsolatedStorageSettings.ApplicationSettings.Contains("total_expense"))
+            {
+                expense = int.Parse(IsolatedStorageSettings.ApplicationSettings["total_expense"].ToString());
+            }
+                ShellTile.ActiveTiles.First().Update(
+                new FlipTileData()
+                {
+                    Count = expense,
+                    WideBackContent = "Total expense : " + expense,
+                    SmallBackgroundImage = new Uri(@"expense159.png", UriKind.Relative),
+                    BackgroundImage = new Uri(@"expense336.png", UriKind.Relative),
+                    BackBackgroundImage = new Uri(@"palm691.png", UriKind.Relative)
+                });
+       }
     }
 }
